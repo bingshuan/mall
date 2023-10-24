@@ -18,7 +18,11 @@ public class RedisCommonProcessor {
     @Autowired
     private RedisTemplate redisTemplate;
 
-    //通过key获取value
+    /**
+     * 通过key获取value
+     * @param key
+     * @return
+     */
     public Object get(String key) {
         if (key == null) {
             throw new UnsupportedOperationException("Redis key could not be null!");
@@ -26,12 +30,21 @@ public class RedisCommonProcessor {
         return redisTemplate.opsForValue().get(key);
     }
 
-    //向redis中存入key: value
+    /**
+     * 向redis中存入key: value
+     * @param key
+     * @param value
+     */
     public void set(String key, Object value) {
         redisTemplate.opsForValue().set(key, value);
     }
 
-    //向reids中存入key: value 数据对，并支持过期时间
+    /**
+     * 向reids中存入key: value 数据对，并支持过期时间
+     * @param key
+     * @param value
+     * @param time
+     */
     public void set(String key, Object value, long time) {
         if (time > 0) {
             redisTemplate.opsForValue().set(key, value, time, TimeUnit.SECONDS);

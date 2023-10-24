@@ -13,7 +13,8 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 /**
  * @author peng
  * @version 1.0
- * @description TODO
+ * @description RedisTemplate 将使用指定的序列化器对键和值进行序列化和反序列化，
+ * 以便在与 Redis 数据库进行交互时能够正确地保存和读取对象
  * @date 2023/10/23 19:50
  */
 @Configuration
