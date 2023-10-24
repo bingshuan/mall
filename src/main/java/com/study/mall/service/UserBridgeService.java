@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * @author peng
  * @version 1.0
- * @description TODO
+ * @description 桥接模式
  * @date 2023/10/15 22:14
  */
 @Service
