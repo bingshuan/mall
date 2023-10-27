@@ -1,11 +1,10 @@
 package com.study.mall.controller;
 
-import com.study.mall.items.ProductComposite;
+import com.study.mall.items.composite.ProductComposite;
+import com.study.mall.pojo.ProductItem;
 import com.study.mall.service.ProductItemService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author peng
@@ -21,10 +20,19 @@ public class ProductItemController {
 
     /**
      * 商品类目查询
-     * @return
      */
     @GetMapping("/fetchAllItems")
-    private ProductComposite fetchAllItems() {
+    public ProductComposite fetchAllItems() {
         return productItemService.fetchAllItems();
+    }
+
+    @PostMapping("/addItems")
+    public ProductComposite addItems(@RequestBody ProductItem item) {
+        return productItemService.addItems(item);
+    }
+
+    @PostMapping("/delItems")
+    public ProductComposite delItems(@RequestBody ProductItem item) {
+        return productItemService.delItems(item);
     }
 }

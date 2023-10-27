@@ -1,4 +1,4 @@
-package com.study.mall.items;
+package com.study.mall.items.composite;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * @author peng
  * @version 1.0
- * @description TODO
+ * @description Composite数值构件
  * @date 2023/10/25 21:30
  */
 @Data
@@ -26,12 +26,12 @@ public class ProductComposite extends AbstractProductItem {
     private List<AbstractProductItem> child = new ArrayList<>();
 
     @Override
-    protected void addProductItem(AbstractProductItem item) {
+    public void addProductItem(AbstractProductItem item) {
         child.add(item);
     }
 
     @Override
-    protected void deleteProductChild(AbstractProductItem item) {
+    public void deleteProductChild(AbstractProductItem item) {
         ProductComposite removeItem = (ProductComposite) item;
         Iterator iterator = child.iterator();
         while (iterator.hasNext()) {
