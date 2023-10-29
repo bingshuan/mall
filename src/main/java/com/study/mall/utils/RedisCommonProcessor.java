@@ -53,4 +53,7 @@ public class RedisCommonProcessor {
         }
     }
 
+    public void remove(String orderId) {
+        redisTemplate.delete(orderId);
+    }
 }
