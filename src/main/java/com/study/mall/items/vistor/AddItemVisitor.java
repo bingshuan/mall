@@ -39,7 +39,7 @@ public class AddItemVisitor implements ItemVisitor<AbstractProductItem> {
     private void addChild(ProductComposite addItem, ProductComposite currentItem) {
         for (AbstractProductItem abstractItem : currentItem.getChild()){
             ProductComposite item = (ProductComposite) abstractItem;
-            if (addItem.getPid() == item.getPid()){
+            if (item.getId() == addItem.getPid()){
                 item.addProductItem(addItem);
             }else {
                 addChild(addItem,item);

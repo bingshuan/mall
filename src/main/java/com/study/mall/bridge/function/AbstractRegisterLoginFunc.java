@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  * @author peng
  * @version 1.0
- * @description TODO
+ * @description
  * @date 2023/10/22 9:13
  */
 public abstract class AbstractRegisterLoginFunc implements RegisterLoginFuncInterface {

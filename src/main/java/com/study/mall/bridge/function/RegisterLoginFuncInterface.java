@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * @author peng
  * @version 1.0
- * @description TODO
+ * @description 核心方法的承载接口 （或方法）
  * @date 2023/10/21 13:59
  */
 public interface RegisterLoginFuncInterface {

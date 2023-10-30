@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * @author peng
  * @version 1.0
- * @description TODO
+ * @description 抽象角色——为调用端提供方法调用入口
  * @date 2023/10/21 14:15
  */
 public abstract class AbstractRegisterLoginComponent {
@@ -20,7 +20,6 @@ public abstract class AbstractRegisterLoginComponent {
         validate(funcInterface);
         this.funcInterface = funcInterface;
     }
-
     //校验参数为 RegisterLoginFuncInterface类型且不为null, final方法，不允许子类覆盖
     protected final void validate(RegisterLoginFuncInterface funcInterface) {
         if (!(funcInterface instanceof RegisterLoginFuncInterface)) {

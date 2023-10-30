@@ -19,6 +19,7 @@ public class DeprecatedCreateObserver extends DeprecatedAbstractObserver{
     public void init() {
         DeprecatedConstants.OBSERVER_LIST.add(this);
     }
+
     @Override
     public void orderStateHandle(String orderId, String orderState) {
         if(!orderState.equals("ORDER_WAIT_PAY")) {

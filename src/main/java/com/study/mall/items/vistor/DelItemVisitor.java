@@ -24,7 +24,7 @@ public class DelItemVisitor implements ItemVisitor<AbstractProductItem>{
         //需要删除的商品类目
         ProductComposite delItem = (ProductComposite) productItem;
         //不可删除根节点
-        if(delItem.getPid() == currentItem.getId()) {
+        if(delItem.getId() == currentItem.getId()) {
             throw new UnsupportedOperationException("父节点不能删除！");
         }
         //如果删除节点的父节点为当前节点，则直接删除

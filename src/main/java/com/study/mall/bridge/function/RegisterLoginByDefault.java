@@ -11,7 +11,7 @@ import javax.annotation.PostConstruct;
 /**
  * @author peng
  * @version 1.0
- * @description TODO
+ * @description 承载核心方法的具体子类 ——支持已有的账号密码登录
  * @date 2023/10/21 13:56
  */
 @Component

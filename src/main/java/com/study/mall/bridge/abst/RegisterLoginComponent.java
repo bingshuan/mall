@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * @author peng
  * @version 1.0
- * @description TODO
+ * @description 抽象角色子类
  * @date 2023/10/21 14:13
  */
 public class RegisterLoginComponent extends AbstractRegisterLoginComponent {
